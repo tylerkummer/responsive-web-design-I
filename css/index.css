@@ -169,8 +169,14 @@ h1, h2, h3, h4, h5 {
 
   /*Media Queries*/
   @media(max-width: 800px){
-	  .logo{
-		  margin: 1% 40%;
+	  .navbar ul{
+		  flex-direction: column-reverse;
+		  align-items: center;
+		  text-align: center;
+	  }
+
+	  .top .navbar .logo{
+		margin: 0 5%;
 	  }
 
 	  .header-img{
@@ -186,8 +192,7 @@ h1, h2, h3, h4, h5 {
 	  }
 
 	  .container .caption a{
-		  margin-left: 40%;
-		  margin-bottom: 5%;
+		 margin-left: 40%;
 	  }
 	  
 	  .content-section .top{
@@ -222,6 +227,10 @@ h1, h2, h3, h4, h5 {
 		text-align: center;
 	}
 
+	.caption h1{
+		text-align: left;
+	}
+
 	.content-section .container .top{
 		flex-direction: column;
 		align-items: center;
@@ -229,6 +238,6 @@ h1, h2, h3, h4, h5 {
 
 	.content-section .container .bottom{
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 	}
   }
