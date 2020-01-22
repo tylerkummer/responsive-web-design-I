@@ -74,17 +74,19 @@ h1, h2, h3, h4, h5 {
 	padding: 10px;
   }
   
-  .main-header .navbar ul {
+  .main-header .navbar{
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
   }
   
-  .main-header .navbar ul li {
-	display: flex;
-	padding: 0 20px;
+  .main-header .navbar .links{
+	width:60%;
+	display:flex;
+	justify-content:space-evenly;
+	align-items:center;
   }
   
-  .main-header .navbar ul li a {
+  .main-header .navbar a {
 	color: #ccc;
 	text-decoration: none;
 	padding: 5px;
@@ -169,7 +171,7 @@ h1, h2, h3, h4, h5 {
 
   /*Media Queries*/
   @media(max-width: 800px){
-	  .navbar ul{
+	  .container .top .navbar{
 		  flex-direction: column-reverse;
 		  align-items: center;
 		  text-align: center;
@@ -215,12 +217,16 @@ h1, h2, h3, h4, h5 {
   }
 
   @media(max-width: 500px){
-	.container .navbar ul{
-		flex-direction: column;
+	.container .top .navbar{
+		flex-direction: column-reverse;
 		align-items: center;
 	}
 
-	.container .navbar ul a{
+	.links{
+		flex-direction: column;
+	}
+
+	.container .navbar a{
 		border: 1px solid grey;
 		width: 500px;
 		height: 50px;
